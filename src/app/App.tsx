@@ -2,10 +2,10 @@ import { Suspense } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import './styles/index.scss';
 
-import { AboutPage } from './pages/AboutPage/AboutPage.async';
-import { MainPage } from './pages/MainPage/MainPage.async';
-import { useTheme } from './theme/useTheme';
-import { classNames } from './helpers/classNames/classNames';
+import { classNames } from 'shared/lib/classNames';
+import { useTheme } from 'shared/contexts/ThemeContext';
+import { AboutPage } from 'pages/AboutPage';
+import { MainPage } from 'pages/MainPage';
 
 
 const App = () => {

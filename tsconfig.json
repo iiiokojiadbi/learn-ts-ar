@@ -18,7 +18,12 @@
     // лоадеры вроде ts-loader или babel-loader автоматически создают их вместо такого импорта
     // import * as React from 'react'; > import React from 'react';
     "allowSyntheticDefaultImports": true,
-    // "baseUrl": ".",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    }
   },
   "ts-node": {
     "compilerOptions": {
