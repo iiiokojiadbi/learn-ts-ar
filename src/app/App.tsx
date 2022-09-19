@@ -1,11 +1,9 @@
-import { Suspense } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './styles/index.scss';
 
 import { classNames } from 'shared/lib/classNames';
 import { useTheme } from 'shared/contexts/ThemeContext';
-import { AboutPage } from 'pages/AboutPage';
-import { MainPage } from 'pages/MainPage';
+import { AppRouter } from 'app/providers/Router';
 
 
 const App = () => {
@@ -17,12 +15,7 @@ const App = () => {
     <Link to={'/'}>Главная</Link>
     <Link to={'/about'}>О сайте</Link>
 
-    <Suspense fallback="Идет загрузка...">
-      <Routes>
-        <Route path={"/about"} element={<AboutPage />} />
-        <Route path={"/"} element={<MainPage />} />
-      </Routes>
-    </Suspense>
+    <AppRouter />
   </div >
 }
 
